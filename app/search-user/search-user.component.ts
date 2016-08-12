@@ -1,6 +1,6 @@
 import {Component} from '@angular/core'
-import {Http} from '@angular/http'
 import {User} from '../shared/model/user'
+import {GithubUserProxy} from '../shared/proxies/github-user.proxy'
 
 @Component({
   selector: 'au-search-user',
@@ -17,10 +17,10 @@ export class SearchUserComponent {
 
   user: User
 
-  constructor(private http:Http){}
+  constructor(private proxy:GithubUserProxy){}
 
   searchUser(username:string){
-    this.http.get('https://api.github.com/users/' + username)
+    this.proxy.searchUserByUsername(username)
     .map(response => response.json())
     .subscribe(
       data => {

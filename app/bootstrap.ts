@@ -6,8 +6,11 @@ import 'zone.js/dist/zone'
 import 'zone.js/dist/long-stack-trace-zone'
 import { bootstrap } from '@angular/platform-browser-dynamic'
 import { HTTP_PROVIDERS } from '@angular/http'
+
+import {GithubUserProxy} from './shared/proxies/github-user.proxy'
 import {AppComponent} from './main'
 
 bootstrap(AppComponent, [
-  HTTP_PROVIDERS
+  HTTP_PROVIDERS,
+  GithubUserProxy
 ])
