@@ -1,22 +1,21 @@
 import {Component} from '@angular/core'
 import {Http} from '@angular/http'
+import {User} from '../shared/model/user'
 
 @Component({
   selector: 'au-search-user',
   template: `<input type="text" #username>
              <button id="searchUser" (click)="searchUser(username.value)">Search</button>
-             <div *ngIf="login">
-              <p id="login">{{login}}</p>
-              <p id="name">{{name}}</p>
-              <img src="{{imageUrl}}"/>
+             <div *ngIf="user">
+              <p id="login">{{user.login}}</p>
+              <p id="name">{{user.name}}</p>
+              <img src="{{user.imageUrl}}"/>
              </div>`
 })
 
 export class SearchUserComponent {
 
-  login: string
-  name: string
-  imageUrl: string
+  user: User
 
   constructor(private http:Http){}
 
@@ -25,9 +24,7 @@ export class SearchUserComponent {
     .map(response => response.json())
     .subscribe(
       data => {
-        this.login = data.login
-        this.name = data.name
-        this.imageUrl = data.avatar_url
+        this.user = {"login":data.login, "name":data.name, "imageUrl":data.avatar_url}
       },
       error => console.log(error)
     )

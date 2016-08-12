@@ -30,12 +30,9 @@
     "buildOnSave": false,
     "files": [
         "./app/bootstrap.ts",
-        "./app/helloworld/hello-world.component.ts",
-        "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
         "./app/search-user/search-user.component.ts",
-        "./test/helloworld/hello-world.component.spec.ts",
-        "./test/helloworld/hello-world.service.spec.ts",
+        "./app/shared/model/user.ts",
         "./test/init.ts"
     ],
     "atom": {
