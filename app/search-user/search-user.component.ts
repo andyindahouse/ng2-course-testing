@@ -4,7 +4,7 @@ import {SearchUserService} from './search-user.service'
 
 @Component({
   selector: 'au-search-user',
-  template: `<input type="text" #username>
+  template: `<input id="username" type="text" #username>
              <button id="searchUser" (click)="searchUser(username.value)">Search</button>
              <div *ngIf="user">
               <p id="login">{{user.login}}</p>

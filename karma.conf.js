@@ -16,11 +16,11 @@ module.exports = function(config) {
     jspm: {
       config: 'config.js',
       loadFiles: [
-        'build/test/init.js','build/test/**/*.spec.js',
+        'build/test/units/init.js','build/test/units/**/*.spec.js',
       ],
       serveFiles: [
         'build/app/**/*.js',
-        'build/test/**/*mock.js'
+        'build/test/units/**/*mock.js'
       ]
     },
 

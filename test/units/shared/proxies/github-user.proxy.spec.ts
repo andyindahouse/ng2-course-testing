@@ -3,7 +3,7 @@ import {MockBackend, MockConnection} from '@angular/http/testing'
 import {BaseRequestOptions, Http, Response, ResponseOptions} from '@angular/http'
 import {provide} from '@angular/core'
 
-import {GithubUserProxy} from '../../../app/shared/proxies/github-user.proxy'
+import {GithubUserProxy} from '../../../../app/shared/proxies/github-user.proxy'
 
 describe('Github User proxy', () => {
 

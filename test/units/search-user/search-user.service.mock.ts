@@ -1,5 +1,5 @@
 import {Observable} from 'rxjs/Observable'
-import {User} from '../../app/shared/model/user'
+import {User} from '../../../app/shared/model/user'
 
 export class SearchUserServiceMock {
 

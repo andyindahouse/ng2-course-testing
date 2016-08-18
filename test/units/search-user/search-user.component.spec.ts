@@ -2,8 +2,8 @@ import {describe, it, expect, beforeEachProviders, inject, async} from '@angular
 import {TestComponentBuilder, ComponentFixture} from '@angular/compiler/testing'
 import {provide} from '@angular/core'
 
-import {SearchUserComponent} from '../../app/search-user/search-user.component'
-import {SearchUserService} from '../../app/search-user/search-user.service'
+import {SearchUserComponent} from '../../../app/search-user/search-user.component'
+import {SearchUserService} from '../../../app/search-user/search-user.service'
 import {SearchUserServiceMock} from './search-user.service.mock'
 
 describe('Search User Component', () => {
